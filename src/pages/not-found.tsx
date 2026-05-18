@@ -6,7 +6,7 @@ export function NotFound() {
     const router = useNavigate();
 
     return (
-        <section className="flex min-h-screen items-start bg-primary py-16 md:items-center md:py-24">
+        <section className="flex-1 items-start bg-primary py-16 md:items-center md:py-24">
             <div className="mx-auto max-w-container grow px-4 md:px-8">
                 <div className="flex w-full max-w-3xl flex-col gap-8 md:gap-12">
                     <div className="flex flex-col gap-4 md:gap-6">
