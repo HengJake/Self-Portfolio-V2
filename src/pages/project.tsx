@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import focusflowHomepage from "@/asset/img/project/focusflow-homepage.png";
 import focusflowTasklist from "@/asset/img/project/focusflow-tasklist.png";
 import ppeClient from "@/asset/img/project/ppe-client.png";
@@ -56,32 +55,6 @@ export const ProjectScreen = () => {
 
 // Replace just the image div inside your map:
 const ProjectCard = ({ project }: { project: (typeof projects)[0] }) => {
-    const [current, setCurrent] = useState(0);
-    const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-    const resetTimer = () => {
-        if (timerRef.current) clearInterval(timerRef.current);
-        timerRef.current = setInterval(() => {
-            setCurrent((prev) => (prev + 1) % project.images.length);
-        }, 5000);
-    };
-
-    useEffect(() => {
-        resetTimer();
-        return () => {
-            if (timerRef.current) clearInterval(timerRef.current);
-        };
-    }, []);
-
-    const prev = () => {
-        setCurrent((c) => (c - 1 + project.images.length) % project.images.length);
-        resetTimer();
-    };
-
-    const next = () => {
-        setCurrent((c) => (c + 1) % project.images.length);
-        resetTimer();
-    };
 
     return (
         <div className="flex flex-col overflow-hidden rounded-xl border border-secondary bg-primary_alt">
