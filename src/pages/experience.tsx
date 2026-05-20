@@ -14,7 +14,7 @@ export const ExperienceScreen = () => {
                     {/* Vertical line */}
                     <div className="absolute top-2 left-[7px] h-full w-px bg-secondary" />
 
-                    {experiences.map((exp, index) => (
+                    {experiences.map((exp) => (
                         <div key={exp.id} className="relative flex gap-6 pb-10">
                             {/* Dot */}
                             <div className="relative z-10 mt-1.5 shrink-0">

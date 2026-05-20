@@ -51,9 +51,9 @@ export const AboutScreen = () => {
                 <p className="text-xs font-bold text-white">Experience</p>
                 {experiences.slice(0, 2).map((exp) => (
                     <div key={exp.id} className="flex items-start gap-2">
-                        <span className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${exp.placeholder ? "bg-green-400" : "bg-white/40"}`} />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/40" />
                         <div>
-                            <p className={`text-xs font-medium ${exp.placeholder ? "text-green-400" : "text-white"}`}>{exp.company}</p>
+                            <p className="text-xs font-medium text-white">{exp.company}</p>
                             <p className="text-xs text-white/50">
                                 {exp.role} · {exp.period}
                             </p>
