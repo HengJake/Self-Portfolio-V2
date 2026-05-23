@@ -14,7 +14,7 @@ import "@/styles/globals.css";
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
         <ThemeProvider>
-            <BrowserRouter>
+            <BrowserRouter basename={import.meta.env.BASE_URL}>
                 <RouteProvider>
                     <div className="min-h-screen flex flex-col">
                         <Header />

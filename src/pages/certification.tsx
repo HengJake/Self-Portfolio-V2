@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { Badge } from "@/components/base/badges/badges";
 import { Button } from "@/components/base/buttons/button";
+import awsCert from "../asset/img/certification/AWS_Participation.jpg";
+import ciscoCert from "../asset/img/certification/CISCO_Cert.jpg";
+import csharpCert from "../asset/img/certification/CSHARP_cert.png";
+import web3Cert from "../asset/img/certification/WEB3_Participation.jpg";
+import dataBrickCert from "../asset/img/certification/databrick_cert.png";
+import placeholder from "../asset/img/certification/placeholder.png";
 
 const certificates = [
     {
@@ -9,7 +15,7 @@ const certificates = [
         issuer: "Cisco",
         year: "Sep 2025",
         category: "Networking",
-        image: "/src/asset/img/certification/CISCO_Cert.jpg",
+        image: ciscoCert,
         credentialUrl: "https://www.linkedin.com/in/heng-jun-kai/overlay/Certifications/749079038/treasury/?profileId=ACoAAEi9jRsB0OiS9a9Oj-uPewAe72SZzYxXVfo",
     },
     {
@@ -18,7 +24,7 @@ const certificates = [
         issuer: "APUBCC",
         year: "Sep 2025",
         category: "Blockchain",
-        image: "/src/asset/img/certification/WEB3_Participation.jpg",
+        image: web3Cert,
         credentialUrl: "https://www.linkedin.com/in/heng-jun-kai/overlay/Certifications/362702563/treasury/?profileId=ACoAAEi9jRsB0OiS9a9Oj-uPewAe72SZzYxXVfo",
     },
     {
@@ -27,7 +33,7 @@ const certificates = [
         issuer: "freeCodeCamp & Microsoft",
         year: "Oct 2025",
         category: "Language",
-        image: "/src/asset/img/certification/CSHARP_cert.png",
+        image: csharpCert,
         credentialUrl: "https://www.freecodecamp.org/certification/hengjake/foundational-c-sharp-with-microsoft",
     },
     {
@@ -36,7 +42,7 @@ const certificates = [
         issuer: "Databricks",
         year: "Nov 2025",
         category: "AI",
-        image: "/src/asset/img/certification/databrick_cert.png",
+        image: dataBrickCert,
         credentialUrl: "https://credentials.databricks.com/57cb03e0-f62c-4424-a124-26f8ab05a8c8#acc.7mwla5DH",
     },
     {
@@ -45,8 +51,9 @@ const certificates = [
         issuer: "Amazon Web Services",
         year: "Oct 2025",
         category: "Cloud",
-        image: "/src/asset/img/certification/AWS_Participation.jpg",
-        credentialUrl: "https://www.linkedin.com/posts/heng-jun-kai_just-wrapped-up-the-largest-hackathon-on-site-ugcPost-7376231600361156608-Cli4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEi9jRsB0OiS9a9Oj-uPewAe72SZzYxXVfo",
+        image: awsCert,
+        credentialUrl:
+            "https://www.linkedin.com/posts/heng-jun-kai_just-wrapped-up-the-largest-hackathon-on-site-ugcPost-7376231600361156608-Cli4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEi9jRsB0OiS9a9Oj-uPewAe72SZzYxXVfo",
     },
     {
         id: 6,
@@ -54,7 +61,7 @@ const certificates = [
         issuer: "AWS Training and Certification",
         year: "Dec 2025",
         category: "Cloud",
-        image: "/src/asset/img/certification/placeholder.png",
+        image: placeholder,
         credentialUrl: "https://www.credly.com/badges/ba189b1e-db3d-4f17-b611-6d4b9dd3fb6d/linked_in_profile",
     },
     {
@@ -63,9 +70,9 @@ const certificates = [
         issuer: "AWS Training and Certification",
         year: "Nov 2025",
         category: "Cloud",
-        image: "/src/asset/img/certification/placeholder.png",
+        image: placeholder,
         credentialUrl: "https://www.credly.com/badges/385ee080-44f3-4220-9d73-20f2f0971079/linked_in_profile",
-    }
+    },
 ];
 
 type Certificate = (typeof certificates)[0];
