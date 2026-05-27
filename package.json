@@ -7,10 +7,12 @@
         "dev": "vite",
         "build": "tsc -b && vite build",
         "preview": "vite preview",
-        "predeploy": "npm run build",
+        "predeploy": "npm run build && copy dist\\index.html dist\\404.html",
         "deploy": "gh-pages -d dist"
     },
     "dependencies": {
+        "@ai-sdk/google": "^3.0.78",
+        "@ai-sdk/react": "^3.0.193",
         "@react-aria/utils": "^3.34.0",
         "@react-stately/utils": "^3.12.0",
         "@react-types/overlays": "^3.10.0",
@@ -18,6 +20,7 @@
         "@tailwindcss/vite": "^4.2.2",
         "@untitledui/file-icons": "^0.0.9",
         "@untitledui/icons": "^0.0.22",
+        "ai": "^6.0.188",
         "embla-carousel-react": "^8.6.0",
         "input-otp": "^1.4.2",
         "motion": "^12.38.0",

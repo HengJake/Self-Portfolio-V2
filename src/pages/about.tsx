@@ -3,7 +3,23 @@
 import { Button } from "@/components/base/buttons/button";
 import { experiences } from "@/data/experience";
 
+import { experiences } from "@/data/experience";
+
 export const AboutScreen = () => {
+    const [input, setInput] = useState("");
+    const { messages, sendMessage, status } = useChat();
+
+    const isLoading = status === "submitted" || status === "streaming";
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!input.trim() || isLoading) return;
+        sendMessage({ text: input });
+        setInput("");
+    };
+
+    const suggestions = ["What's your tech stack?", "Tell me about a recent project", "Why Wollongong?"];
+
     return (
         <div className="relative flex h-full w-full flex-1 items-center justify-center bg-primary p-4">
             {/* Top Left - Name */}
@@ -17,7 +33,7 @@ export const AboutScreen = () => {
                 <p className="font-semibold text-white">Currently at Wollongong</p>
             </div>
 
-            {/* Center - Tagline */}
+            {/* Center - AI chatbot */}
             <div className="flex h-full items-center justify-center">
                 <p className="max-w-sm text-4xl leading-tight font-bold text-white">
                     Hi,
@@ -26,7 +42,6 @@ export const AboutScreen = () => {
                     <br />
                 </p>
             </div>
-
             {/* Bottom Left - Contact details */}
             <div className="absolute bottom-8 left-16 flex flex-col gap-1">
                 <div className="flex items-center gap-3">
@@ -53,6 +68,7 @@ export const AboutScreen = () => {
                 <p className="text-xs font-bold text-white">Experience</p>
                 {experiences.slice(0, 2).map((exp) => (
                     <div key={exp.id} className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/40" />
                         <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/40" />
                         <div>
                             <p className="text-xs font-medium text-white">{exp.company}</p>
