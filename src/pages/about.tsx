@@ -1,6 +1,8 @@
 "use client";
+
 import { Button } from "@/components/base/buttons/button";
-import {experiences} from "@/data/experience";
+import { experiences } from "@/data/experience";
+
 export const AboutScreen = () => {
     return (
         <div className="relative flex h-full w-full flex-1 items-center justify-center bg-primary p-4">
@@ -18,9 +20,9 @@ export const AboutScreen = () => {
             {/* Center - Tagline */}
             <div className="flex h-full items-center justify-center">
                 <p className="max-w-sm text-4xl leading-tight font-bold text-white">
-                    Something here
+                    Hi,
                     <br />
-                    Something here
+                    Let's Connect !
                     <br />
                 </p>
             </div>
@@ -51,7 +53,7 @@ export const AboutScreen = () => {
                 <p className="text-xs font-bold text-white">Experience</p>
                 {experiences.slice(0, 2).map((exp) => (
                     <div key={exp.id} className="flex items-start gap-2">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full  bg-white/40" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/40" />
                         <div>
                             <p className="text-xs font-medium text-white">{exp.company}</p>
                             <p className="text-xs text-white/50">
