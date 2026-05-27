@@ -3,23 +3,7 @@
 import { Button } from "@/components/base/buttons/button";
 import { experiences } from "@/data/experience";
 
-import { experiences } from "@/data/experience";
-
 export const AboutScreen = () => {
-    const [input, setInput] = useState("");
-    const { messages, sendMessage, status } = useChat();
-
-    const isLoading = status === "submitted" || status === "streaming";
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        if (!input.trim() || isLoading) return;
-        sendMessage({ text: input });
-        setInput("");
-    };
-
-    const suggestions = ["What's your tech stack?", "Tell me about a recent project", "Why Wollongong?"];
-
     return (
         <div className="relative flex h-full w-full flex-1 items-center justify-center bg-primary p-4">
             {/* Top Left - Name */}
